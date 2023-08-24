@@ -31,21 +31,25 @@
 
               <div class="row m-2">
 
+
+
                 <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                    aria-expanded="false">
-                    Dropdown button
+                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Search By...
                   </button>
-                  <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
+                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    <a class="dropdown-item alcohol" href="#">Alcohol</a>
+                    <a class="dropdown-item glass" href="#">Glass Type</a>
+                    <a class="dropdown-item category" href="#">Category</a>
+                  </div>
                 </div>
-                <div class="col-sm-3 p-0">
-                  <button class="btn bg-dark rounded-0 search-button">
-                    <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
-                  </button>
+                <div class="input-group mb-3">
+                  <div class="input-group-prepend">
+                  </div>
+                  <input type="text" class="form-control searchBar" aria-label="Default"
+                    aria-describedby="inputGroup-sizing-default">
+                  <button type="button" class="btn btn-dark searchBtn">Search</button>
                 </div>
               </div>
               <div class="past-search-container"></div>

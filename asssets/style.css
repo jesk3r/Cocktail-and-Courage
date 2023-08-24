@@ -1,10 +1,12 @@
-#myInput:focus {outline: 3px solid #ddd;}
+#myInput:focus {
+  outline: 3px solid #ddd;
+}
 
 .dropdown {
   position: relative;
   display: inline-block;
 }
-#titlepage { 
-    border: 5px 
-    }
-    
+
+#titlepage {
+  border: 5px
+}
