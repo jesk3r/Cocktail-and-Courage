@@ -1,0 +1,43 @@
+@font-face {
+    font-family: Solo;
+    src: url('../fonts/Solo.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Minimal;
+    src: url('../fonts/minimal.otf') format('opentype');
+}
+
+@font-face {
+    font-family: Attentica;
+    src: url('../fonts/attentica-4f.ultralight.ttf') format('truetype');
+}
+
+
+body{
+    font-family: Solo;
+    
+}
+
+
+main{
+    /* margin: 4rem; */
+    /* margin-left: 5rem; */
+   
+    padding-left: 5rem;
+    padding-top: 4rem;
+    width: 100vw;
+    
+}
+
+header{
+    top: 0px;
+    max-height: 4rem;
+}
+
+nav{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+}
