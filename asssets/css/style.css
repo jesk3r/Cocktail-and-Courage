@@ -35,9 +35,76 @@ header{
     max-height: 4rem;
 }
 
+
+
 nav{
     width: 5rem;
-    height: 100vh;
+    height: 91%;
     position: fixed;
-    top: 0;
+    top: 9%;
+
+    /* animation */
+    transition: width 200ms ease;
+   
+    /* bs fix */
+   
 }
+
+.SearchTools{
+    display: none;
+}
+
+nav:hover{
+    width: 16rem;
+}
+
+nav:hover .SearchTools{
+    display: block;
+}
+
+
+
+/* animate this */
+.alcoholCard:hover{
+    border: 10px solid gold;
+
+}
+
+@keyframes example {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+.alcoholCard{
+  
+    animation-name: example;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+   
+}
+
+.alcoholCard img{
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    width: 100%; 
+    object-fit: contain;
+    height: 100%; 
+    /* max-width: 100%;
+    max-height: 100%; */
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+.alcoholCard img:hover{
+    -webkit-filter: grayscale(0%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+}
+
+.alcoholCard p{
+    position: absolute;
+
+}
+
+
+

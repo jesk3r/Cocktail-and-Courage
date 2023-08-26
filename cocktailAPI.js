@@ -1,12 +1,13 @@
 
 //add spacing filter
 function serachCocktailByName(nameOfCocktail) {
-  apiUrl = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=mar';
+  apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${nameOfCocktail}`;
 
   return fetch(apiUrl).then((response) => {
     return response.json()
   }).then(data => {
-    console.log(data)
+    
+    return data
   })
 }
 
