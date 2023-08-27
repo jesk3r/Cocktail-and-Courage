@@ -19,6 +19,12 @@
 
 <body>
     
+
+
+    <div class="text-light d-flex justify-content-center align-items-center bg-black" style="position: absolute; width: 100vw; height: 100vh;  z-index: 1000;">
+        <h1 class="sticky-top">Cocktail <span class="text-danger">and</span> Courage</h1>
+    </div>
+
     <header class="bg-black position-fixed w-100"> <h1 class="text-center text-light p-1">cocktail and courage</h1> </header>
     
     <nav class="bg-black p-2">
@@ -26,38 +32,80 @@
             <div class="d-flex flex-column ">
                 <input type="text" id="serachText"/>
 
+                <label class="text-light" for="drink-categories">Select a drink category:</label>
                 <div class="d-inline-flex p-2 gap-3 justify-content-start ">
                     <input type="checkbox" id="huey1" name="drone" value="huey" checked />
                 
-                    <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                    <select id="drink-categories" disabled>
+                        <option value="none">None</option>
+                        <option value="Ordinary Drink">Ordinary Drink</option>
+                        <option value="Cocktail">Cocktail</option>
+                        <option value="Shake">Shake</option>
+                        <option value="Other / Unknown">Other / Unknown</option>
+                        <option value="Cocoa">Cocoa</option>
+                        <option value="Shot">Shot</option>
+                        <option value="Coffee / Tea">Coffee / Tea</option>
+                        <option value="Homemade Liqueur">Homemade Liqueur</option>
+                        <option value="Punch / Party Drink">Punch / Party Drink</option>
+                        <option value="Beer">Beer</option>
+                        <option value="Soft Drink">Soft Drink</option>
                     </select>
+                
                 </div>
 
+                <label class="text-light" for="glass-types">Select a glass type:</label>
+                <div class="d-inline-flex p-2 gap-3 justify-content-start">
+                    <input type="checkbox" id="huey1" name="drone" value="huey" checked />
+                
+                    <select id="glass-types">
+                        <option value="none">None</option>
+                        <option value="Highball glass">Highball glass</option>
+                        <option value="Cocktail glass">Cocktail glass</option>
+                        <option value="Old-fashioned glass">Old-fashioned glass</option>
+                        <option value="Whiskey Glass">Whiskey Glass</option>
+                        <option value="Collins glass">Collins glass</option>
+                        <option value="Pousse cafe glass">Pousse cafe glass</option>
+                        <option value="Champagne flute">Champagne flute</option>
+                        <option value="Whiskey sour glass">Whiskey sour glass</option>
+                        <option value="Cordial glass">Cordial glass</option>
+                        <option value="Brandy snifter">Brandy snifter</option>
+                        <option value="White wine glass">White wine glass</option>
+                        <option value="Nick and Nora Glass">Nick and Nora Glass</option>
+                        <option value="Hurricane glass">Hurricane glass</option>
+                        <option value="Coffee mug">Coffee mug</option>
+                        <option value="Shot glass">Shot glass</option>
+                        <option value="Jar">Jar</option>
+                        <option value="Irish coffee cup">Irish coffee cup</option>
+                        <option value="Punch bowl">Punch bowl</option>
+                        <option value="Pitcher">Pitcher</option>
+                        <option value="Pint glass">Pint glass</option>
+                        <option value="Copper Mug">Copper Mug</option>
+                        <option value="Wine Glass">Wine Glass</option>
+                        <option value="Beer mug">Beer mug</option>
+                        <option value="Margarita/Coupette glass">Margarita/Coupette glass</option>
+                        <option value="Beer pilsner">Beer pilsner</option>
+                        <option value="Beer Glass">Beer Glass</option>
+                        <option value="Parfait glass">Parfait glass</option>
+                        <option value="Mason jar">Mason jar</option>
+                        <option value="Margarita glass">Margarita glass</option>
+                        <option value="Martini Glass">Martini Glass</option>
+                        <option value="Balloon Glass">Balloon Glass</option>
+                        <option value="Coupe Glass">Coupe Glass</option>
+                    </select>
+                </div>
+                
+                <label class="text-light" for="alcoholic-options">Select an alcoholic option:</label>
                 <div class="d-inline-flex p-2 gap-3 justify-content-start">
                     <input type="checkbox" id="huey" name="drone" value="huey" checked />
                 
-                    <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
+                   
+                    <select id="alcoholic-options">
+                        <option value="none">None</option>
+                        <option value="Alcoholic">Alcoholic</option>
+                        <option value="Non alcoholic">Non alcoholic</option>
+                        <option value="Optional alcohol">Optional alcohol</option>
                     </select>
-                </div>
-                
 
-                <div class="d-inline-flex p-2 gap-3 justify-content-start">
-                    <input type="checkbox" id="huey" name="drone" value="huey" checked />
-                
-                    <select name="cars" id="cars">
-                        <option value="volvo">Volvo</option>
-                        <option value="saab">Saab</option>
-                        <option value="mercedes">Mercedes</option>
-                        <option value="audi">Audi</option>
-                    </select>
                 </div>
 
                 <div class="d-flex">
@@ -82,7 +130,8 @@
 
     </main>
 
-    <!-- modal for the quote -->
+    <!-- modal for the quote 
+-->
     <!-- change the size and look  -->
 
     
@@ -95,7 +144,8 @@
     <script src="./cocktailAPI.js"></script>
     <script src="./zenAPI.js"></script>
     <script src="./main.js"></script>
-    <main class="bg-secondary ">
+
+    <main class="bg-secondary " style="height: 1000vh;">
         <div class="container-fluid">
             <div class="row page-content">
                 <div class="col-sm-1 bg-secondary p-1">
@@ -125,7 +175,7 @@
                         <div id="myModal" class="modal">
 
                             <!-- Modal content -->
-                            <div class="modal-content">
+                            <div class="modal-content bg-black" style="height: 300px; width: 600px;">
                                 <span class="close">&times;</span>
                                 <div class="container-fluid">
                                     <div class="row page-content">
@@ -148,7 +198,7 @@
                                         <div class="col-sm-8 p-0">
                                             <!-- this is the right side of the module -->
                                             <div>
-                                                <img src="https://placehold.co/600x400/EEE/31343C">
+                                                <img src="https://placehold.co/300x300/">
                                             </div>
                                             <p> QUOTE HERE ! </p>
                                         </div>
@@ -156,6 +206,7 @@
                                 </div>
 
                             </div>
+
                         </div>
                     </div>
 
