@@ -2,151 +2,212 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./asssets/style.css">
-  <title>cocktails</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" href="./asssets/css/style.css">
+
+
 </head>
 
 <body>
+    
 
 
-  <header>
-    <div class="h1-container d-flex translate-middle	border-success bg-dark  justify-content-center" id="titlepage">
-      <h1 class="h1 text-light">cocktail and courage</h1>
-    </div>
-  </header>
+    <!-- <div class="text-light d-flex justify-content-center align-items-center bg-black" style="position: absolute; width: 100vw; height: 100vh;  z-index: 1000;">
+        <h1 class="sticky-top">Cocktail <span class="text-danger">and</span> Courage</h1>
+    </div> -->
 
-  <main>
-    <div class="container-fluid">
-      <div class="row page-content">
-        <div class="col-sm-4 bg-light p-1">
-          <div class="form-container">
-            <div id="search-form">
-              <!-- <div class="row m-2"> -->
-              <!-- <label for="search-input" class="search-label m-1 text-info">Search for a cocktail:</label> -->
-              <!-- </div> -->
+    <header class="bg-black position-fixed w-100"> <h1 class="text-center text-light p-1">cocktail and courage</h1> </header>
+    
+    <!-- <nav class="bg-black p-2">
+        <div class="SearchTools">
+            <div class="d-flex flex-column ">
+                <input type="text" id="serachText"/>
 
-
-              <div class="row m-2">
-
-
-
-                <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Search By...
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item alcohol" href="#">Alcohol</a>
-                    <a class="dropdown-item glass" href="#">Glass Type</a>
-                    <a class="dropdown-item category" href="#">Category</a>
-                  </div>
+                <label class="text-light" for="drink-categories">Select a drink category:</label>
+                <div class="d-inline-flex p-2 gap-3 justify-content-start ">
+                    <input type="checkbox" id="huey1" name="drone" value="huey" checked />
+                
+                    <select id="drink-categories" disabled>
+                        <option value="none">None</option>
+                        <option value="Ordinary Drink">Ordinary Drink</option>
+                        <option value="Cocktail">Cocktail</option>
+                        <option value="Shake">Shake</option>
+                        <option value="Other / Unknown">Other / Unknown</option>
+                        <option value="Cocoa">Cocoa</option>
+                        <option value="Shot">Shot</option>
+                        <option value="Coffee / Tea">Coffee / Tea</option>
+                        <option value="Homemade Liqueur">Homemade Liqueur</option>
+                        <option value="Punch / Party Drink">Punch / Party Drink</option>
+                        <option value="Beer">Beer</option>
+                        <option value="Soft Drink">Soft Drink</option>
+                    </select>
+                
                 </div>
-                <div class="input-group mb-3">
-                  <div class="input-group-prepend">
-                  </div>
-                  <input type="text" class="form-control searchBar" aria-label="Default"
-                    aria-describedby="inputGroup-sizing-default">
-                  <button type="button" class="btn btn-dark searchBtn">Search</button>
+
+                <label class="text-light" for="glass-types">Select a glass type:</label>
+                <div class="d-inline-flex p-2 gap-3 justify-content-start">
+                    <input type="checkbox" id="huey1" name="drone" value="huey" checked />
+                
+                    <select id="glass-types">
+                        <option value="none">None</option>
+                        <option value="Highball glass">Highball glass</option>
+                        <option value="Cocktail glass">Cocktail glass</option>
+                        <option value="Old-fashioned glass">Old-fashioned glass</option>
+                        <option value="Whiskey Glass">Whiskey Glass</option>
+                        <option value="Collins glass">Collins glass</option>
+                        <option value="Pousse cafe glass">Pousse cafe glass</option>
+                        <option value="Champagne flute">Champagne flute</option>
+                        <option value="Whiskey sour glass">Whiskey sour glass</option>
+                        <option value="Cordial glass">Cordial glass</option>
+                        <option value="Brandy snifter">Brandy snifter</option>
+                        <option value="White wine glass">White wine glass</option>
+                        <option value="Nick and Nora Glass">Nick and Nora Glass</option>
+                        <option value="Hurricane glass">Hurricane glass</option>
+                        <option value="Coffee mug">Coffee mug</option>
+                        <option value="Shot glass">Shot glass</option>
+                        <option value="Jar">Jar</option>
+                        <option value="Irish coffee cup">Irish coffee cup</option>
+                        <option value="Punch bowl">Punch bowl</option>
+                        <option value="Pitcher">Pitcher</option>
+                        <option value="Pint glass">Pint glass</option>
+                        <option value="Copper Mug">Copper Mug</option>
+                        <option value="Wine Glass">Wine Glass</option>
+                        <option value="Beer mug">Beer mug</option>
+                        <option value="Margarita/Coupette glass">Margarita/Coupette glass</option>
+                        <option value="Beer pilsner">Beer pilsner</option>
+                        <option value="Beer Glass">Beer Glass</option>
+                        <option value="Parfait glass">Parfait glass</option>
+                        <option value="Mason jar">Mason jar</option>
+                        <option value="Margarita glass">Margarita glass</option>
+                        <option value="Martini Glass">Martini Glass</option>
+                        <option value="Balloon Glass">Balloon Glass</option>
+                        <option value="Coupe Glass">Coupe Glass</option>
+                    </select>
                 </div>
-              </div>
-              <div class="past-search-container"></div>
-              <div id="search-history-container" class="row m-0 search-history-container">
+                
+                <label class="text-light" for="alcoholic-options">Select an alcoholic option:</label>
+                <div class="d-inline-flex p-2 gap-3 justify-content-start">
+                    <input type="checkbox" id="huey" name="drone" value="huey" checked />
+                
+                   
+                    <select id="alcoholic-options">
+                        <option value="none">None</option>
+                        <option value="Alcoholic">Alcoholic</option>
+                        <option value="Non alcoholic">Non alcoholic</option>
+                        <option value="Optional alcohol">Optional alcohol</option>
+                    </select>
 
-              </div>
+                </div>
+
+                <div class="d-flex">
+
+                </div>
+                
+                <input type="button" value="serach" id="serachButton">
+            
             </div>
-          </div>
-
-
-
         </div>
-        <div class="col-sm-8 p-0">
-          <div class="row row-cols-3 row-cols-lg-4 g-3 g-lg-3">
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-            <div class="col">
-              <div class="p-3">name of cocktails</div>
-            </div>
-          </div>
-        </div>
+        
+    </nav> -->
 
+    <!-- all the main content related to the web goes here -->
+       
+
+    <main class="bg-secondary" style="">
+   
+    <!-- a flex box containing all the image cards -->
+    <div class="d-flex flex-row justify-content-start flex-wrap  p-5" id="CocktailDisplayArea"> 
+    </div>
+
+    </main>
+
+    <!-- modal for the quote -->
+    <!-- change the size and look  -->
+    
+    <!-- the accutal  modal -->
+   
+
+
+    <!-- modal from the innternet -->
+    <button id="myBtn">Open Modal</button>
+
+    <!-- The Modal -->
+    
+    <!-- <div id="myModal" class="modal">
+    
+      
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>Some text in the Modal..</p>
       </div>
+    
+    </div> -->
 
-      <div class="col-sm-8 p-0">
-        <div id="current-title-container">
-          <h2 id="cocktail selector" class="current-title d-inline">
-            cocktail name
-          </h2>
+    <div id="myModal" class="modal">
+    
+        <!-- Modal content -->
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          
+          <div class="d-flex justify-content-evenly ">
+          
+          <div class="d-flex flex-column m-2">
+            <div>
+               <h3>Ingredients</h3>
+               <ul>
+                    <li>zzcvzcvzxcvzcv</li>
+               </ul>
+            </div>
+            <div>
+                <h3>Instructions</h3>
+                <ul>
+                     <li></li>
+                </ul>
+             </div>
 
-          <ul>
-            <class=li a>
-              </class>
-              <li><a href="cocktail.asp">cocktail name</a></li>
-              <li><a href="cocktailAPI.js">cocktail name</a></li>
-              <li><a href="cocktailAPI.js">Cocktail name</a></li>
-              <li><a href="cocktail.asp">cockail name</a></li>
-          </ul>
+       
+            </div>
 
-          <p class="cocktailname">cocktailnames</p>
-          <p class="cocktailname">cocktailnames</p>
-          <p class="cocktailname">cocktailnames </p>
-
+            <div class="d-flex flex-column" style="gap: 2rem;">
+                <div>
+                    <img src=" https:\/\/www.thecocktaildb.com\/images\/media\/drink\/tqyrpw1439905311.jpg" style="max-width: 300px; max-height: 300px;">
+                   
+                </div>
+                <div>
+                    <h2>Name of Drink</h2>
+                </div>
+          </div>
+          </div>
         </div>
-
-      </div>
-    </div>
-    </div>
-    </div>
-    </div>
+      
     </div>
 
-  </main>
+    <!-- modal form the internet end -->
 
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
-    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-    crossorigin="anonymous"></script>
-  <script src="./cocktailAPI.js"></script>
-  <script src="./zenAPI.js"></script>
-  <script src="./main.js"></script>
+
+    <script src="./cocktailAPI.js"></script>
+    <script src="./zenAPI.js"></script>=
+    <script src="./main.js"></script>
+    
+    
+
+
+    
+
+    <script src="./cocktailAPI.js"></script>
+
 </body>
 
 </html>
