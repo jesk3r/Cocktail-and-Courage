@@ -37,6 +37,8 @@ function displayInfo(data){
             //CockTailDisplay.append(CocktailCard)
         }
 
+    }else{
+        //write that notihng was found
     }
   
 }
@@ -102,3 +104,4 @@ function searchButtonEventHandler(){
 $('#serachButton').on('click', searchButtonEventHandler)
 
 // getRandomQuote().then((data) => console.log(data))
+

@@ -39,9 +39,9 @@ header{
 
 nav{
     width: 5rem;
-    height: 91%;
+    height: 100%;
     position: fixed;
-    top: 9%;
+    /* top: 9%; */
 
     /* animation */
     transition: width 200ms ease;
@@ -60,8 +60,8 @@ nav:hover{
 
 nav:hover .SearchTools{
     display: block;
+    margin-top: 40%;
 }
-
 
 
 /* animate this */
