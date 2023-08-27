@@ -47,7 +47,7 @@ nav{
     transition: width 200ms ease;
    
     /* bs fix */
-   
+    z-index: 1000000;
 }
 
 .SearchTools{
