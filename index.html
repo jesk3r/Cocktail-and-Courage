@@ -11,6 +11,10 @@
 
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 
     <link rel="stylesheet" href="./asssets/css/style.css">
 
@@ -27,7 +31,24 @@
 
     <header class="bg-black position-fixed w-100"> <h1 class="text-center text-light p-1">cocktail and courage</h1> </header>
     
-    <!-- <nav class="bg-black p-2">
+    <nav class="bg-black p-2">
+       
+<!-- style="margin-left: 0.5rem; margin-top: 2rem;" -->
+
+        <div class="d-flex justify-content-center mt-5">
+            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="flex-shrink-1"
+                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <style>
+                    svg {
+                        fill: #ff2600
+                    }
+                </style>
+                <path
+                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+            </svg>
+            <p class="text-light align-self-end">serach</p>
+        </div>
+
         <div class="SearchTools">
             <div class="d-flex flex-column ">
                 <input type="text" id="serachText"/>
@@ -117,12 +138,12 @@
             </div>
         </div>
         
-    </nav> -->
+    </nav>
 
     <!-- all the main content related to the web goes here -->
        
 
-    <main class="bg-secondary" style="">
+    <main class="" >
    
     <!-- a flex box containing all the image cards -->
     <div class="d-flex flex-row justify-content-start flex-wrap  p-5" id="CocktailDisplayArea"> 
@@ -138,7 +159,9 @@
 
 
     <!-- modal from the innternet -->
-    <button id="myBtn">Open Modal</button>
+
+    <!-- the button that opens up the Modal -->
+    <!-- <button id="myBtn">Open Modal</button> -->
 
     <!-- The Modal -->
     
@@ -155,6 +178,7 @@
     <div id="myModal" class="modal">
     
         <!-- Modal content -->
+        <!-- style="display: none;" -->
         <div class="modal-content">
           <span class="close">&times;</span>
           
@@ -163,15 +187,16 @@
           <div class="d-flex flex-column m-2">
             <div>
                <h3>Ingredients</h3>
-               <ul>
+            
+               <ul id="cocktailIngredientList">
                     <li>zzcvzcvzxcvzcv</li>
                </ul>
             </div>
             <div>
                 <h3>Instructions</h3>
-                <ul>
-                     <li></li>
-                </ul>
+                <p id="cocktailInstructions">
+
+                </p>
              </div>
 
        
@@ -179,26 +204,36 @@
 
             <div class="d-flex flex-column" style="gap: 2rem;">
                 <div>
-                    <img src=" https:\/\/www.thecocktaildb.com\/images\/media\/drink\/tqyrpw1439905311.jpg" style="max-width: 300px; max-height: 300px;">
+                    <img id="cocktailImage" src=" https:\/\/www.thecocktaildb.com\/images\/media\/drink\/tqyrpw1439905311.jpg" style="max-width: 300px; max-height: 300px;">
                    
                 </div>
                 <div>
-                    <h2>Name of Drink</h2>
+                    <h2 id="cocktailName">Name of Drink</h2>
                 </div>
           </div>
-          </div>
+          </div> 
         </div>
+
+
+        <!-- <div class="modal-content animate__animated animate__fadeInUp">
+            <span class="close">&times;</span>
+            
+            <div class="d-flex justify-content-evenly ">
+                
+                <blockquote class="animate__animated  animate__fadeIn animate__delay-1s"> <h2 id="Quote">&ldquo;True wealth is of the heart, not of the purse.&rdquo; &mdash; </h2> <footer id="personSayingTheQuote">Og Mandino</footer></blockquote>
+                
+             </div>  -->
       
     </div>
 
-    <!-- modal form the internet end -->
+    <!-- end modal form the internet  -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
 
     <script src="./cocktailAPI.js"></script>
-    <script src="./zenAPI.js"></script>=
+    <script src="./zenAPI.js"></script>
     <script src="./main.js"></script>
     
     

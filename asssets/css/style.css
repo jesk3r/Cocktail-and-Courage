@@ -16,7 +16,8 @@
 
 body{
     font-family: Solo;
-    
+    background-color: #59656F;
+    /* background-color: red; */
 }
 
 
@@ -66,8 +67,10 @@ nav:hover .SearchTools{
 
 /* animate this */
 .alcoholCard:hover{
-    border: 10px solid gold;
-
+    border: 4px solid #FFBF46;
+    /* FFBF46 */
+    /* D78521 */
+    /* F4D35E */
 }
 
 @keyframes example {

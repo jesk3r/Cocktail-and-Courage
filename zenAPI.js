@@ -1,13 +1,14 @@
 function getRandomQuote(){
-    // apiURL = 'https://cors-anywhere.herokuapp.com/https://zenquotes.io/api/random'
-    apiURL = 'https://zenquotes.io/api/random'
+
+    apiURL = 'https://api.quotable.io/quotes/random?tags=inspirational'
     return fetch(apiURL).then( (response)=> {
         console.log(response)
         return response.json()
     }).then((data) => {
-        console.log(data)
+       
+        return data
     })
 }
 
 
-getRandomQuote()
+getRandomQuote().then((data) => {console.log(data)})

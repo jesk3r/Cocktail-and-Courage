@@ -4,9 +4,11 @@ console.log('zxvzxcvzcxv')
 var imgs = []
 var cardInterval
 
+var imagesOnDisplay = 0
+
 // serachCocktailByName().then(respnose => console.log(respnose))
 
-
+var cocktailSerachResults;
 
 function displayInfo(data){
     
@@ -30,6 +32,8 @@ function displayInfo(data){
             CocktailCard.children().eq(0).on('load', (event) => {checkIfImgLoaded(event.target)})
             CocktailCard.children().eq(0).on('error', (event) => {console.log('img did not load')})
             CocktailCard.children().eq(0).attr('src', element.strDrinkThumb)
+            CocktailCard.children().eq(0).attr('data-index', index)
+            
             
             
             
@@ -43,6 +47,144 @@ function displayInfo(data){
   
 }
 
+function changeQuote(){
+    var quoteTag=  $('#Quote')
+    var personNameTag = $('#personSayingTheQuote')
+
+    getRandomQuote().then( (data) => {quoteTag.text(data[0].content); personNameTag.text(data[0].author)})
+
+}
+
+function displayModalCocktailInfo(index){
+
+    let infoAboutDrink = cocktailSerachResults.drinks[index]
+
+    let cockTailModalImage = $('#cocktailImage')
+    let cockTailModalName = $('#cocktailName')
+    let cockTailModalInstructions = $('#cocktailInstructions')
+    let cockTailModalIngredients = $('#cocktailIngredientList')
+
+    cockTailModalName.text(infoAboutDrink.strDrink)
+    cockTailModalInstructions.text(infoAboutDrink.strInstructions)
+    cockTailModalImage.attr('src', infoAboutDrink.strDrinkThumb)
+
+    //clear the in Ingredient List
+    cockTailModalIngredients.empty()
+    // Individual null checks for each ingredient
+    if (infoAboutDrink.strIngredient1 !== null) {
+        let ingredient = infoAboutDrink.strIngredient1;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient2 !== null) {
+      
+
+        let ingredient = infoAboutDrink.strIngredient2;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient3 !== null) {
+        let ingredient = infoAboutDrink.strIngredient3;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient4 !== null) {
+        
+        let ingredient = infoAboutDrink.strIngredient4;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+
+    }
+    if (infoAboutDrink.strIngredient5 !== null) {
+        let ingredient = infoAboutDrink.strIngredient5;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+
+    }
+    if (infoAboutDrink.strIngredient6 !== null) {
+        let ingredient = infoAboutDrink.strIngredient6;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient7 !== null) {
+        let ingredient = infoAboutDrink.strIngredient7;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient8 !== null) {
+        let ingredient = infoAboutDrink.strIngredient8;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient9 !== null) {
+        let ingredient = infoAboutDrink.strIngredient9;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient10 !== null) {
+        let ingredient = infoAboutDrink.strIngredient10;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient11 !== null) {
+        let ingredient = infoAboutDrink.strIngredient11;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient12 !== null) {
+        let ingredient = infoAboutDrink.strIngredient12;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient13 !== null) {
+        let ingredient = infoAboutDrink.strIngredient13;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient14 !== null) {
+        let ingredient = infoAboutDrink.strIngredient14;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    if (infoAboutDrink.strIngredient15 !== null) {
+        let ingredient = infoAboutDrink.strIngredient15;
+
+        let listElement = $('<li></li>')
+        listElement.text(ingredient)
+        cockTailModalIngredients.append(listElement)
+    }
+    
+    
+}
+
 function cocktailCardAnimationInterval(){
 
     //pop one from the array and then start the animation on it
@@ -54,10 +196,13 @@ function cocktailCardAnimationInterval(){
         
         let cocktailCardImage =imgs.pop().imageTag
 
-        let CocktailCard = $('<div class="p-2 m-1 alcoholCard" style="height: 25vh; width: 25vw; padding: 0%;background-color: #800020;"></div>')
+        let CocktailCard = $('<div class="p-2 m-1 alcoholCard" style="height: 25vh; width: 25vw; padding: 0%;background-color: #DE1A1A; "></div>')
+
+        cocktailCardImage.onclick = (event) => {changeQuote(); displayModalCocktailInfo(event.target.getAttribute('data-index')) ;modal.style.display = "block";}
 
         CocktailCard.append(cocktailCardImage)
-
+    
+        
         let CockTailDisplay = $('#CocktailDisplayArea')
         CockTailDisplay.append(CocktailCard)
         //change the opasity 
@@ -97,7 +242,7 @@ function searchButtonEventHandler(){
     
     if(varSearchQuarry){
         console.log(varSearchQuarry)
-        serachCocktailByName(varSearchQuarry).then((data) => {displayInfo(data)})
+        serachCocktailByName(varSearchQuarry).then((data) => { cocktailSerachResults = data ;displayInfo(data)})
     }
 }
 
