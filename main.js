@@ -46,9 +46,18 @@ function savePreferances()
 function loadPreferances(){
     saveData = JSON.parse(localStorage.getItem('perferances'))
 
-    drinkSelect.val(saveData.drinkOption)
-    alcoholSelect.val(saveData.alcoholOption)
-    glassSelect.val(saveData.glassOption)
+
+   
+
+    if(saveData){
+        drinkSelect.val(saveData.drinkOption)
+        alcoholSelect.val(saveData.alcoholOption)
+        glassSelect.val(saveData.glassOption)
+    }else{
+        localStorage.setItem('perferances', JSON.stringify({drinkOption: 'none', alcoholOption: 'none', glassOption: 'none' }))
+    }
+
+   
 
 }
 
@@ -324,9 +333,6 @@ var span1 = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close")[1];
 
 // When the user clicks on the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
 
 
 // When the user clicks on <span> (x), close the modal
