@@ -253,7 +253,7 @@ function cocktailCardAnimationInterval(){
 
         let CocktailCard = $('<div class="p-2 m-1 alcoholCard" style="height: 25vh; width: 25vw; padding: 0%;background-color: #DE1A1A; "></div>')
 
-        cocktailCardImage.onclick = (event) => {changeQuote(); displayModalCocktailInfo(event.target.getAttribute('data-index')) ;modal.style.display = "block";}
+        cocktailCardImage.onclick = (event) => {changeQuote(); setQuoteAsOpen() ;displayModalCocktailInfo(event.target.getAttribute('data-index')) ;modal.style.display = "block";}
 
         CocktailCard.append(cocktailCardImage)
     
@@ -332,23 +332,47 @@ var btn = document.getElementById("myBtn");
 var span1 = document.getElementsByClassName("close")[0];
 var span2 = document.getElementsByClassName("close")[1];
 
+
 // When the user clicks on the button, open the modal 
 
 
 // When the user clicks on <span> (x), close the modal
 span1.onclick = function() {
   modal.style.display = "none";
+
+  $("#cocktailInfoModal").attr("class", "displayNone");
+ 
+  $("#QuoteModal").attr(
+    "class",
+    "modal-content animate__animated animate__fadeInUp"
+  );
+  console.log('exit button 1 clicked')
+}
+
+
+function setQuoteAsOpen(){
+    $("#cocktailInfoModal").attr("class", "displayNone");
+ 
+    $("#QuoteModal").attr(
+      "class",
+      "modal-content animate__animated animate__fadeInUp"
+    );
 }
 
 span2.onclick = function() {
     modal.style.display = "none";
+
   }
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
   if (event.target == modal) {
     modal.style.display = "none";
-  }
+
+  
+  console.log('exit button 3 clicked')  
+}
+
 }
 
 
