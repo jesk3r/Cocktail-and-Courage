@@ -148,7 +148,7 @@
 
         <!-- all the main content related to the web goes here -->
         
-        <div id="blurBackDrop" class="position-relative blur " style="width: 100vw; position: relative; left: 5rem; z-index: 10000; ">
+        <div id="blurBackDrop" class="position-relative  " style="width: 100vw; position: relative; left: 5rem; z-index: 10000; ">
         </div>
     </div>  
 
@@ -157,7 +157,7 @@
         <!-- a flex box containing all the image cards -->
         <div class="d-flex flex-row justify-content-start flex-wrap  p-5" id="CocktailDisplayArea"> 
         </div>
-
+        
         </main>
 
     
@@ -170,21 +170,9 @@
 
 
     <!-- modal from the innternet -->
-
-    <!-- the button that opens up the Modal -->
-    <!-- <button id="myBtn">Open Modal</button> -->
-
-    <!-- The Modal -->
-    
-    <!-- <div id="myModal" class="modal">
-    
-      
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Some text in the Modal..</p>
-      </div>
-    
-    </div> -->
+    <div class="card-footer text-light text-center position-fixed bg-black mt-5" style="width: 100%;  bottom: 0;">
+        Drinking & Thinking ® C&C 2023
+    </div>
 
     <div id="myModal" class="modal">
     
@@ -193,7 +181,7 @@
         <div class="displayNone" id="cocktailInfoModal"> 
         
             <div class="d-flex justify-content-between">
-                <span class="close">&times;</span>
+                <span id="close-1" class="close">&times;</span>
                 <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="cocktailModalChangeViewButton" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#4e4d39}</style><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
             </div>
             
@@ -221,7 +209,7 @@
             <div class="d-flex flex-column" style="gap: 2rem;">
                 <div>
                     <img id="cocktailImage" src=" https:\/\/www.thecocktaildb.com\/images\/media\/drink\/tqyrpw1439905311.jpg" style="max-width: 300px; max-height: 300px;">
-                     <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="cocktailModalChangeViewButton" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#4e4d39}</style><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+                   
                 </div>
                 <div>
                     <h2 id="cocktailName">Name of Drink</h2>
@@ -233,7 +221,7 @@
 
         <div id='QuoteModal' class="modal-content animate__animated animate__fadeInUp">
             <div class="d-flex justify-content-between">
-            <span class="close">&times;</span>
+            <span id="close-2" class="close">&times;</span>
             <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="quoteModalChangeViewButton" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#4e4d39}</style><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
             </div>
             <div class="d-flex justify-content-evenly ">
@@ -245,6 +233,8 @@
     </div>
 
     <!-- end modal form the internet  -->
+
+    
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -260,7 +250,7 @@
     
 
     <script src="./cocktailAPI.js"></script>
-
+   
 </body>
 
 </html>
