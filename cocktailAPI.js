@@ -35,20 +35,20 @@ function searchCockTailByIngredient(){
 
 function filters(data, fAlcoholic, fCategories, fglasses){
     let newData = data
-
-    if(fAlcoholic !== 'null'){
+    console.log(newData)
+    if(fAlcoholic !== 'none'){
         newData = newData.filter((drink) => {
             return drink.strAlcoholic === fAlcoholic
         })
     }
 
-    if(fCategories !== 'null'){
+    if(fCategories !== 'none'){
         newData = newData.filter((drink) => {
             return drink.strCategory === fCategories
         })
     }
 
-    if(fglasses !== 'null'){
+    if(fglasses !== 'none'){
         newData = newData.filter((drink) => {
             return drink.strGlass === fglasses
         })

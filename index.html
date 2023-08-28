@@ -29,127 +29,138 @@
         <h1 class="sticky-top">Cocktail <span class="text-danger">and</span> Courage</h1>
     </div> -->
 
-    <header class="bg-black position-fixed w-100"> <h1 class="text-center text-light p-1">cocktail and courage</h1> </header>
+    <header class="bg-black  w-100"> <h1 class="text-center text-light p-1 m-0">cocktail and courage</h1> </header>
     
-    <nav class="bg-black p-2">
-       
-<!-- style="margin-left: 0.5rem; margin-top: 2rem;" -->
 
-        <div class="d-flex justify-content-center mt-5">
-            <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="flex-shrink-1"
-                viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
-                <style>
-                    svg {
-                        fill: #ff2600
-                    }
-                </style>
-                <path
-                    d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
-            </svg>
-            <p class="text-light align-self-end">serach</p>
-        </div>
 
-        <div class="SearchTools">
-            <div class="d-flex flex-column ">
-                <input type="text" id="serachText"/>
 
-                <label class="text-light" for="drink-categories">Select a drink category:</label>
-                <div class="d-inline-flex p-2 gap-3 justify-content-start ">
-                    <input type="checkbox" id="huey1" name="drone" value="huey" checked />
-                
-                    <select id="drink-categories" disabled>
-                        <option value="none">None</option>
-                        <option value="Ordinary Drink">Ordinary Drink</option>
-                        <option value="Cocktail">Cocktail</option>
-                        <option value="Shake">Shake</option>
-                        <option value="Other / Unknown">Other / Unknown</option>
-                        <option value="Cocoa">Cocoa</option>
-                        <option value="Shot">Shot</option>
-                        <option value="Coffee / Tea">Coffee / Tea</option>
-                        <option value="Homemade Liqueur">Homemade Liqueur</option>
-                        <option value="Punch / Party Drink">Punch / Party Drink</option>
-                        <option value="Beer">Beer</option>
-                        <option value="Soft Drink">Soft Drink</option>
-                    </select>
-                
-                </div>
+    <div class="d-flex" style="margin: 0; position: absolute; height: 100vh;">
 
-                <label class="text-light" for="glass-types">Select a glass type:</label>
-                <div class="d-inline-flex p-2 gap-3 justify-content-start">
-                    <input type="checkbox" id="huey1" name="drone" value="huey" checked />
-                
-                    <select id="glass-types">
-                        <option value="none">None</option>
-                        <option value="Highball glass">Highball glass</option>
-                        <option value="Cocktail glass">Cocktail glass</option>
-                        <option value="Old-fashioned glass">Old-fashioned glass</option>
-                        <option value="Whiskey Glass">Whiskey Glass</option>
-                        <option value="Collins glass">Collins glass</option>
-                        <option value="Pousse cafe glass">Pousse cafe glass</option>
-                        <option value="Champagne flute">Champagne flute</option>
-                        <option value="Whiskey sour glass">Whiskey sour glass</option>
-                        <option value="Cordial glass">Cordial glass</option>
-                        <option value="Brandy snifter">Brandy snifter</option>
-                        <option value="White wine glass">White wine glass</option>
-                        <option value="Nick and Nora Glass">Nick and Nora Glass</option>
-                        <option value="Hurricane glass">Hurricane glass</option>
-                        <option value="Coffee mug">Coffee mug</option>
-                        <option value="Shot glass">Shot glass</option>
-                        <option value="Jar">Jar</option>
-                        <option value="Irish coffee cup">Irish coffee cup</option>
-                        <option value="Punch bowl">Punch bowl</option>
-                        <option value="Pitcher">Pitcher</option>
-                        <option value="Pint glass">Pint glass</option>
-                        <option value="Copper Mug">Copper Mug</option>
-                        <option value="Wine Glass">Wine Glass</option>
-                        <option value="Beer mug">Beer mug</option>
-                        <option value="Margarita/Coupette glass">Margarita/Coupette glass</option>
-                        <option value="Beer pilsner">Beer pilsner</option>
-                        <option value="Beer Glass">Beer Glass</option>
-                        <option value="Parfait glass">Parfait glass</option>
-                        <option value="Mason jar">Mason jar</option>
-                        <option value="Margarita glass">Margarita glass</option>
-                        <option value="Martini Glass">Martini Glass</option>
-                        <option value="Balloon Glass">Balloon Glass</option>
-                        <option value="Coupe Glass">Coupe Glass</option>
-                    </select>
-                </div>
-                
-                <label class="text-light" for="alcoholic-options">Select an alcoholic option:</label>
-                <div class="d-inline-flex p-2 gap-3 justify-content-start">
-                    <input type="checkbox" id="huey" name="drone" value="huey" checked />
-                
-                   
-                    <select id="alcoholic-options">
-                        <option value="none">None</option>
-                        <option value="Alcoholic">Alcoholic</option>
-                        <option value="Non alcoholic">Non alcoholic</option>
-                        <option value="Optional alcohol">Optional alcohol</option>
-                    </select>
 
-                </div>
-
-                <div class="d-flex">
-
-                </div>
-                
-                <input type="button" value="serach" id="serachButton">
-            
-            </div>
-        </div>
+        <nav id='navbar' class="bg-black p-2" style="z-index: 1000000000;">
         
-    </nav>
+    <!-- style="margin-left: 0.5rem; margin-top: 2rem;" -->
 
-    <!-- all the main content related to the web goes here -->
-       
+            <div class="d-flex justify-content-center mt-5">
+                <svg xmlns="http://www.w3.org/2000/svg" height="3em" class="flex-shrink-1"
+                    viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                    <style>
+                        svg {
+                            fill: #ff2600
+                        }
+                    </style>
+                    <path
+                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                </svg>
+                <p class="text-light align-self-end">serach</p>
+            </div>
 
-    <main class="" >
-   
-    <!-- a flex box containing all the image cards -->
-    <div class="d-flex flex-row justify-content-start flex-wrap  p-5" id="CocktailDisplayArea"> 
-    </div>
+            <div class="SearchTools" id="searchTools">
+                <div class="d-flex flex-column ">
+                    <input type="text" id="serachText"/>
 
-    </main>
+                    <label class="text-light" for="drink-categories">Select a drink category:</label>
+                    <div class="d-inline-flex p-2 gap-3 justify-content-start ">
+                        <input type="checkbox" id="drink-categoriesCheckBox" name="drone" value="huey"  />
+                    
+                        <select id="drink-categories" disabled>
+                            <option value="none">None</option>
+                            <option value="Ordinary Drink">Ordinary Drink</option>
+                            <option value="Cocktail">Cocktail</option>
+                            <option value="Shake">Shake</option>
+                            <option value="Other / Unknown">Other / Unknown</option>
+                            <option value="Cocoa">Cocoa</option>
+                            <option value="Shot">Shot</option>
+                            <option value="Coffee / Tea">Coffee / Tea</option>
+                            <option value="Homemade Liqueur">Homemade Liqueur</option>
+                            <option value="Punch / Party Drink">Punch / Party Drink</option>
+                            <option value="Beer">Beer</option>
+                            <option value="Soft Drink">Soft Drink</option>
+                        </select>
+                    
+                    </div>
+
+                    <label class="text-light" for="glass-types">Select a glass type:</label>
+                    <div class="d-inline-flex p-2 gap-3 justify-content-start">
+                        <input type="checkbox" id="glassTypeCheckBox" name="drone" value="huey"  />
+                        
+                        <select id="glass-types" disabled>
+                            <option value="none">None</option>
+                            <option value="Highball glass">Highball glass</option>
+                            <option value="Cocktail glass">Cocktail glass</option>
+                            <option value="Old-fashioned glass">Old-fashioned glass</option>
+                            <option value="Whiskey Glass">Whiskey Glass</option>
+                            <option value="Collins glass">Collins glass</option>
+                            <option value="Pousse cafe glass">Pousse cafe glass</option>
+                            <option value="Champagne flute">Champagne flute</option>
+                            <option value="Whiskey sour glass">Whiskey sour glass</option>
+                            <option value="Cordial glass">Cordial glass</option>
+                            <option value="Brandy snifter">Brandy snifter</option>
+                            <option value="White wine glass">White wine glass</option>
+                            <option value="Nick and Nora Glass">Nick and Nora Glass</option>
+                            <option value="Hurricane glass">Hurricane glass</option>
+                            <option value="Coffee mug">Coffee mug</option>
+                            <option value="Shot glass">Shot glass</option>
+                            <option value="Jar">Jar</option>
+                            <option value="Irish coffee cup">Irish coffee cup</option>
+                            <option value="Punch bowl">Punch bowl</option>
+                            <option value="Pitcher">Pitcher</option>
+                            <option value="Pint glass">Pint glass</option>
+                            <option value="Copper Mug">Copper Mug</option>
+                            <option value="Wine Glass">Wine Glass</option>
+                            <option value="Beer mug">Beer mug</option>
+                            <!-- <option value="Margarita/Coupette glass">Margarita/Coupette glass</option> -->
+                            <option value="Beer pilsner">Beer pilsner</option>
+                            <option value="Beer Glass">Beer Glass</option>
+                            <option value="Parfait glass">Parfait glass</option>
+                            <option value="Mason jar">Mason jar</option>
+                            <option value="Margarita glass">Margarita glass</option>
+                            <option value="Martini Glass">Martini Glass</option>
+                            <option value="Balloon Glass">Balloon Glass</option>
+                            <option value="Coupe Glass">Coupe Glass</option>
+                        </select>
+                    </div>
+                    
+                    <label class="text-light" for="alcoholic-options">Select an alcoholic option:</label>
+                    <div class="d-inline-flex p-2 gap-3 justify-content-start">
+                        <input type="checkbox" id="alcoholicCheckBox" name="drone" value="huey"  />
+                    
+                    
+                        <select id="alcoholic-options" disabled>
+                            <option value="none">None</option>
+                            <option value="Alcoholic">Alcoholic</option>
+                            <option value="Non alcoholic">Non alcoholic</option>
+                            <option value="Optional alcohol">Optional alcohol</option>
+                        </select>
+
+                    </div>
+
+                    <div class="d-flex">
+
+                    </div>
+                    
+                    <input type="button" value="serach" id="serachButton">
+                
+                </div>
+            </div>
+            
+        </nav>
+
+        <!-- all the main content related to the web goes here -->
+        
+        <div id="blurBackDrop" class="position-relative blur " style="width: 100vw; position: relative; left: 5rem; z-index: 10000; ">
+        </div>
+    </div>  
+
+        <main class=""  >
+    
+        <!-- a flex box containing all the image cards -->
+        <div class="d-flex flex-row justify-content-start flex-wrap  p-5" id="CocktailDisplayArea"> 
+        </div>
+
+        </main>
+
+    
 
     <!-- modal for the quote -->
     <!-- change the size and look  -->
@@ -179,8 +190,13 @@
     
         <!-- Modal content -->
         <!-- style="display: none;" -->
-        <div class="modal-content">
-          <span class="close">&times;</span>
+        <div class="displayNone" id="cocktailInfoModal"> 
+        
+            <div class="d-flex justify-content-between">
+                <span class="close">&times;</span>
+                <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="cocktailModalChangeViewButton" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#4e4d39}</style><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+            </div>
+            
           
           <div class="d-flex justify-content-evenly ">
           
@@ -205,7 +221,7 @@
             <div class="d-flex flex-column" style="gap: 2rem;">
                 <div>
                     <img id="cocktailImage" src=" https:\/\/www.thecocktaildb.com\/images\/media\/drink\/tqyrpw1439905311.jpg" style="max-width: 300px; max-height: 300px;">
-                   
+                     <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="cocktailModalChangeViewButton" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#4e4d39}</style><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
                 </div>
                 <div>
                     <h2 id="cocktailName">Name of Drink</h2>
@@ -215,14 +231,16 @@
         </div>
 
 
-        <!-- <div class="modal-content animate__animated animate__fadeInUp">
+        <div id='QuoteModal' class="modal-content animate__animated animate__fadeInUp">
+            <div class="d-flex justify-content-between">
             <span class="close">&times;</span>
-            
+            <svg xmlns="http://www.w3.org/2000/svg" height="2em" id="quoteModalChangeViewButton" viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><style>svg{fill:#4e4d39}</style><path d="M214.6 41.4c-12.5-12.5-32.8-12.5-45.3 0l-160 160c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0L160 141.2V448c0 17.7 14.3 32 32 32s32-14.3 32-32V141.2L329.4 246.6c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3l-160-160z"/></svg>
+            </div>
             <div class="d-flex justify-content-evenly ">
                 
                 <blockquote class="animate__animated  animate__fadeIn animate__delay-1s"> <h2 id="Quote">&ldquo;True wealth is of the heart, not of the purse.&rdquo; &mdash; </h2> <footer id="personSayingTheQuote">Og Mandino</footer></blockquote>
                 
-             </div>  -->
+        </div> 
       
     </div>
 

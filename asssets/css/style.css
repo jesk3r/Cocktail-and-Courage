@@ -41,7 +41,7 @@ header{
 nav{
     width: 5rem;
     height: 100%;
-    position: fixed;
+    position: absolute;
     /* top: 9%; */
 
     /* animation */
@@ -49,6 +49,11 @@ nav{
    
     /* bs fix */
     z-index: 1000000;
+}
+
+.blur{
+    backdrop-filter: blur(2px);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .SearchTools{
@@ -142,6 +147,9 @@ font-size: medium;
   }
 
 
+.displayNone{
+    display: none;
+}
 
 
 
@@ -159,6 +167,7 @@ font-size: medium;
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
     backdrop-filter: blur(2px);
     -webkit-backdrop-filter: blur(2px);
+    z-index: 9000000000;
   }
   
   /* Modal Content/Box */
