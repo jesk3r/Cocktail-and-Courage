@@ -3,6 +3,8 @@
 function serachCocktailByName(nameOfCocktail) {
   apiUrl = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${nameOfCocktail}`;
 
+  // apiUrl = `./testingData.json`;
+
   return fetch(apiUrl).then((response) => {
     return response.json()
   }).then(data => {
@@ -33,25 +35,30 @@ function searchCockTailByIngredient(){
 
 }
 
-function filters(data, fAlcoholic, fCategories, fglasses){
-    let newData = data
-    console.log(newData)
-    if(fAlcoholic !== 'none'){
-        newData = newData.filter((drink) => {
-            return drink.strAlcoholic === fAlcoholic
-        })
+function filters(data, bAlcoholicEnabled, bCategoriesEnabled, bglassesEnabled,fAlcoholic, fCategories, fglasses){
+    // let newData = data
+    
+
+    var newData = data['drinks']
+    
+    if(bAlcoholicEnabled){
+
+     newData = newData.filter((elemetn) => {return elemetn['strAlcoholic'] === fAlcoholic})
+     console.log('A-filter resulsts: '+ newData)
+     console.log(newData)
+
     }
 
-    if(fCategories !== 'none'){
-        newData = newData.filter((drink) => {
-            return drink.strCategory === fCategories
-        })
+    if(bCategoriesEnabled){
+      newData = newData.filter((elemetn) => {return elemetn['strCategory'] === fCategories})
+      console.log('C-filter resulsts: '+ newData)
+      console.log(newData)
     }
 
-    if(fglasses !== 'none'){
-        newData = newData.filter((drink) => {
-            return drink.strGlass === fglasses
-        })
+    if(bglassesEnabled){
+      newData = newData.filter((elemetn) => {return elemetn['strGlass'] === fglasses})
+      console.log('G-filter resulsts: '+ fglasses)
+      console.log(newData)
     }
 
     return newData
@@ -167,6 +174,13 @@ window.onclick = function(event) {
 //             console.error('Error fetching data:', error);
 //         });
 // };
+
+
+var jsonData;
+serachCocktailByName("").then((data) => {
+  console.log(data);
+  filters(data,true,true,true,'Alcoholic', 'Ordinary Drink', 'Cocktail glass',)
+});
 
 
 

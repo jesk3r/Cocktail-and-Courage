@@ -57,16 +57,19 @@
 
             <div class="SearchTools" id="searchTools">
                 <div class="d-flex flex-column ">
+                    <label class="text-light" for="drink-categories">Enter drink name: </label>
                     <input type="text" id="serachText"/>
+
+                    <h4 class="text-light mt-4">Filter out drinks</h4>
 
                     <label class="text-light" for="drink-categories">Select a drink category:</label>
                     <div class="d-inline-flex p-2 gap-3 justify-content-start ">
                         <input type="checkbox" id="drink-categoriesCheckBox" name="drone" value="huey"  />
                     
-                        <select id="drink-categories" disabled>
-                            <option value="none">None</option>
-                            <option value="Ordinary Drink">Ordinary Drink</option>
+                        <select id="drink-categories" disabled>         
                             <option value="Cocktail">Cocktail</option>
+                            <option value="Ordinary Drink">Ordinary Drink</option>
+                            
                             <option value="Shake">Shake</option>
                             <option value="Other / Unknown">Other / Unknown</option>
                             <option value="Cocoa">Cocoa</option>
@@ -84,8 +87,7 @@
                     <div class="d-inline-flex p-2 gap-3 justify-content-start">
                         <input type="checkbox" id="glassTypeCheckBox" name="drone" value="huey"  />
                         
-                        <select id="glass-types" disabled>
-                            <option value="none">None</option>
+                        <select id="glass-types" disabled> 
                             <option value="Highball glass">Highball glass</option>
                             <option value="Cocktail glass">Cocktail glass</option>
                             <option value="Old-fashioned glass">Old-fashioned glass</option>
@@ -127,7 +129,6 @@
                     
                     
                         <select id="alcoholic-options" disabled>
-                            <option value="none">None</option>
                             <option value="Alcoholic">Alcoholic</option>
                             <option value="Non alcoholic">Non alcoholic</option>
                             <option value="Optional alcohol">Optional alcohol</option>

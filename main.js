@@ -26,9 +26,9 @@ var alcoholSelect = $('#alcoholic-options')
 var glassSelect = $('#glass-types')
 
 
-dirnkCheckBox.on('click', () =>{ drinkSelect.prop('disabled', !drinkSelect.prop('disabled') ) ;savePreferances()})
-glassCheckBox.on('click', () =>{ glassSelect.prop('disabled', !glassSelect.prop('disabled') ) ;savePreferances()})
-alcoholCheckBox.on('click',  () =>{ alcoholSelect.prop('disabled', !alcoholSelect.prop('disabled') ) ;savePreferances()})
+dirnkCheckBox.on('click', () =>{ drinkSelect.prop('disabled', !dirnkCheckBox.prop('checked') ) ;savePreferances()})
+glassCheckBox.on('click', () =>{ glassSelect.prop('disabled', !glassCheckBox.prop('checked') ) ;savePreferances()})
+alcoholCheckBox.on('click',  () =>{ alcoholSelect.prop('disabled', !alcoholCheckBox.prop('checked') ) ;savePreferances()})
 
 drinkSelect.on('change',savePreferances )
 alcoholSelect.on('change',savePreferances )
@@ -39,7 +39,7 @@ function savePreferances()
     console.log('saved preferances')
 
     
-    localStorage.setItem('perferances', JSON.stringify({drinkOption: drinkSelect.val(), alcoholOption: alcoholSelect.val(), glassOption: glassSelect.val() }))
+    localStorage.setItem('perferances', JSON.stringify({drinkOptionEnabled:  dirnkCheckBox.prop('checked'), alcoholOptionEnabled: alcoholCheckBox.prop('checked'), glassOptionEnabled:  glassCheckBox.prop('checked'), falsedrinkOption: drinkSelect.val(), alcoholOption: alcoholSelect.val(), glassOption: glassSelect.val() }))
 
 }
 
@@ -53,14 +53,24 @@ function loadPreferances(){
         drinkSelect.val(saveData.drinkOption)
         alcoholSelect.val(saveData.alcoholOption)
         glassSelect.val(saveData.glassOption)
+
+        dirnkCheckBox.prop('checked',saveData.drinkOptionEnabled)
+        glassCheckBox.prop('checked',saveData.glassOptionEnabled)
+        alcoholCheckBox.prop('checked',saveData.alcoholOptionEnabled)
+
+
+        drinkSelect.prop('disabled', !dirnkCheckBox.prop('checked') )
+        glassSelect.prop('disabled', !glassCheckBox.prop('checked') ) 
+        alcoholSelect.prop('disabled', !alcoholCheckBox.prop('checked') ) 
+
+
     }else{
-        localStorage.setItem('perferances', JSON.stringify({drinkOption: 'none', alcoholOption: 'none', glassOption: 'none' }))
+        localStorage.setItem('perferances', JSON.stringify({drinkOptionEnabled: false, alcoholOptionEnabled: false, glassOptionEnabled: false,drinkOption: 'none', alcoholOption: 'none', glassOption: 'none' }))
     }
 
    
 
 }
-
 
 loadPreferances()
 
@@ -72,13 +82,12 @@ function displayInfo(data){
 
     CockTailDisplay.empty()
 
-    if(data.drinks){
-        console.log(typeof(data.drinks.length))
-        console.log(data.drinks.length)
+    if(data.length !== 0){
+       
         
 
-        for (let index = 0; index < 5; index++) {
-            const element = data.drinks[index];
+        for (let index = 0; index < 9; index++) {
+            const element = data[index];
             console.log('name: ' + element.strDrink + "  drinkImage Url: " + element.strDrinkThumb)
             let CocktailCard = $('<div class="p-2 m-1 alcoholCard" style="height: 25vh; width: 25vw; padding: 0%;background-color: #800020;"> <img src="https:\/\/www.thecocktaildb.com\/images\/media\/drink\/p5r0tr1503564636.jpg"> </div>')
             // CocktailCard.children().eq(0).attr('src', element.strDrinkThumb)
@@ -98,6 +107,7 @@ function displayInfo(data){
 
     }else{
         //write that notihng was found
+        CockTailDisplay.append($('<p>No search resulsts found</p>'))
     }
   
 }
@@ -112,7 +122,7 @@ function changeQuote(){
 
 function displayModalCocktailInfo(index){
 
-    let infoAboutDrink = cocktailSerachResults.drinks[index]
+    let infoAboutDrink = cocktailSerachResults[index]
 
     let cockTailModalImage = $('#cocktailImage')
     let cockTailModalName = $('#cocktailName')
@@ -302,6 +312,7 @@ function searchButtonEventHandler(){
         console.log(varSearchQuarry)
         serachCocktailByName(varSearchQuarry).then((data) => {
           cocktailSerachResults = data
+          cocktailSerachResults = filters(cocktailSerachResults, alcoholCheckBox.prop('checked'), dirnkCheckBox.prop('checked'), glassCheckBox.prop('checked'), alcoholSelect.val()  ,drinkSelect.val(),glassSelect.val() )
           displayInfo(cocktailSerachResults);
         });
     }
