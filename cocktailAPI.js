@@ -44,21 +44,18 @@ function filters(data, bAlcoholicEnabled, bCategoriesEnabled, bglassesEnabled,fA
     if(bAlcoholicEnabled){
 
      newData = newData.filter((elemetn) => {return elemetn['strAlcoholic'] === fAlcoholic})
-     console.log('A-filter resulsts: '+ newData)
-     console.log(newData)
+    
 
     }
 
     if(bCategoriesEnabled){
       newData = newData.filter((elemetn) => {return elemetn['strCategory'] === fCategories})
-      console.log('C-filter resulsts: '+ newData)
-      console.log(newData)
+     
     }
 
     if(bglassesEnabled){
       newData = newData.filter((elemetn) => {return elemetn['strGlass'] === fglasses})
-      console.log('G-filter resulsts: '+ fglasses)
-      console.log(newData)
+     
     }
 
     return newData
@@ -176,11 +173,7 @@ window.onclick = function(event) {
 // };
 
 
-var jsonData;
-serachCocktailByName("").then((data) => {
-  console.log(data);
-  filters(data,true,true,true,'Alcoholic', 'Ordinary Drink', 'Cocktail glass',)
-});
+
 
 
 
